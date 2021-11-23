@@ -19,16 +19,17 @@ const port = process.env.PORT || 3000;
 const { createServer } = require("http");
 const { Server } = require("socket.io");
 
-const cors = require('cors')
+
 
 
 const app = express();
-app.use(cors());
+
 const server = createServer(app);
 const io = new Server(server, {
-  cors: {
-    origin: "*",
-  },
+	cors: {
+		origin: "https://ab3pc-simplechat.herokuapp.com:3000",
+		methods: ["GET", "POST"]
+	  }
 });
 
 app.use(express.json());

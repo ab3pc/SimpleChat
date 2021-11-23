@@ -20,7 +20,7 @@ const { createServer } = require("http");
 const { Server } = require("socket.io");
 
 const cors = require('cors')
-app.use(cors());
+
 
 const app = express();
 const server = createServer(app);
@@ -32,6 +32,7 @@ const io = new Server(server, {
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(cors());
 //Указиваем что мое експресс-приложение понимает что есть запросы,
 //которые могут отправлять из запросом данные в req.body
 

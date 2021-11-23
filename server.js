@@ -27,7 +27,7 @@ const app = express();
 const server = createServer(app);
 const io = new Server(server, {
 	cors: {
-		origin: "https://ab3pc-simplechat.herokuapp.com:3000",
+		origin: `https://ab3pc-simplechat.herokuapp.com:${port}`,
 		methods: ["GET", "POST"]
 	  }
 });

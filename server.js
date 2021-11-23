@@ -15,7 +15,7 @@
 // //и передаем то что вернет useSocket(server) в переменную io
 
 const express = require("express");
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 const { createServer } = require("http");
 const { Server } = require("socket.io");
 
@@ -26,10 +26,9 @@ const app = express();
 
 const server = createServer(app);
 const io = new Server(server, {
-	cors: {
-		origin: `https://ab3pc-simplechat.herokuapp.com:${port}`,
-		methods: ["GET", "POST"]
-	  }
+  cors: {
+    origin: "*",
+  },
 });
 
 app.use(express.json());

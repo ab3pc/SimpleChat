@@ -94,7 +94,7 @@ io.on("connection", (socket) => {
 });
 
 //Запуск нашего сервера
-server.listen(3333, (err) => {
+server.listen(3001, (err) => {
   if (err) {
     throw Error(err);
   }

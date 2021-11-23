@@ -11,7 +11,7 @@ function Chat({ users, messages, roomNumber, userName, addMsg }) {
 
 	}, [messages]);
 	const handleKeyEnter = (e) => {
-		if (e.keyCode == 13) {
+		if (e.keyCode === 13) {
 			console.log(e.keyCode);
 			onSendMessage(e);
 		}

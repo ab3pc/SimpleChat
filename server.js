@@ -15,7 +15,7 @@
 // //и передаем то что вернет useSocket(server) в переменную io
 
 const express = require("express");
-
+const port = process.env.PORT || 3000;
 const { createServer } = require("http");
 const { Server } = require("socket.io");
 
@@ -94,7 +94,7 @@ io.on("connection", (socket) => {
 });
 
 //Запуск нашего сервера
-server.listen(3001, (err) => {
+server.listen(port, (err) => {
   if (err) {
     throw Error(err);
   }

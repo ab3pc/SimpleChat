@@ -36,7 +36,7 @@ app.use(express.urlencoded({ extended: true }));
 
 //Указиваем что мое експресс-приложение понимает что есть запросы,
 //которые могут отправлять из запросом данные в req.body
-app.use(express.static('public'));
+app.use(express.static('./build'));
 const rooms = new Map();
 
 // настройка веб

@@ -18,6 +18,7 @@
     "socket.io-client": "^4.3.2",
     "web-vitals": "^1.0.1"
   },
+  "main": "index.js",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
